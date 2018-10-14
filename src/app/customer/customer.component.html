@@ -1,0 +1,30 @@
+<div class="field" *ngIf="$customer | async as customer">
+  <label class="label">Xin chào, {{customer['0']}}</label>
+  <div *ngIf="customer['0'] == ''" class="control has-icons-left has-icons-right">
+    <input class="input" type="text" placeholder="Sửa tên của chủ ví" [(ngModel)]="name">
+    <span class="icon is-small is-left">
+      <i class="far fa-address-card"></i>
+    </span>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Địa chỉ ví</label>
+  <div class="control has-icons-left has-icons-right">
+    <input class="input" [(ngModel)]="address" disabled>
+    <span class="icon is-small is-left">
+      <i class="fas fa-ticket-alt"></i>
+    </span>
+  </div>
+</div>
+
+
+
+<div class="field is-grouped">
+  <div class="control">
+    <button class="button is-link" (click)="updateUser()">Cập nhật</button>
+  </div>
+  <div class="control">
+    <button class="button is-text"(click)="addPoint(address,address,10)">Send me fake point (for test only)</button>
+  </div>
+</div>

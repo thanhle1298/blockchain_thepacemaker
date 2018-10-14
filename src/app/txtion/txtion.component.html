@@ -1,0 +1,84 @@
+<table class="table" style="width:100%">
+  <thead>
+    <tr>
+      <th><abbr>Time</abbr></th>
+      <th><abbr>Sender</abbr></th>
+      <th><abbr>Receiver.</abbr></th>
+      <th><abbr>Point</abbr></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th>8:00 AM</th>
+      <td>Nguyen Van A</td>
+      <td>Nguyen Van B</td>
+      <td>+12</td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+<h1>Chuyển Point cho người khác:</h1>
+
+
+<div class="field">
+  <label class="label">Địa chỉ gửi (tôi)*</label>
+  <div class="control has-icons-left has-icons-right">
+    <input class="input " type="text" placeholder="Nhập địa chỉ muốn chuyển tới" [(ngModel)]="send_sender" disabled>
+    <span class="icon is-small is-left">
+      <i class="far fa-address-card"></i>
+    </span>
+
+  </div>
+</div>
+
+
+<div class="field">
+  <label class="label">Địa chỉ nhận*</label>
+  <div class="control has-icons-left has-icons-right">
+    <input class="input " type="text" placeholder="Nhập địa chỉ muốn chuyển tới" [(ngModel)]="send_receiver">
+    <span class="icon is-small is-left">
+      <i class="far fa-address-card"></i>
+    </span>
+
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Số point*</label>
+  <div class="control has-icons-left has-icons-right">
+    <input class="input " type="number" placeholder="Số point gửi" [(ngModel)]="send_point">
+    <span class="icon is-small is-left">
+      <i class="fas fa-ticket-alt"></i>
+    </span>
+
+  </div>
+</div>
+
+<!-- <div class="field">
+  <label class="label">Lời nhắn</label>
+  <div class="control">
+    <textarea class="textarea" placeholder="Lời nhắn trao yêu thương..."></textarea>
+  </div>
+</div> -->
+
+<div class="field">
+  <div class="control">
+    <label class="checkbox">
+      <input type="checkbox">
+      Tôi đồng ý với <a href="#">Điều khoản của POINTIA</a>
+    </label>
+  </div>
+</div>
+
+
+<div class="field is-grouped">
+  <div class="control">
+    <button class="button is-link" (click)="givePointToOther(send_sender, send_receiver, send_point)">Gửi</button>
+  </div>
+  <div class="control">
+    <button class="button is-text">Xóa form</button>
+  </div>
+</div>
